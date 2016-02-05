@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.alexcomeau.texmobile" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:maxSdkVersion="23"/>
+
+    <application
+        android:versionCode="2"
+        android:versionName="1.1.0"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.GameActivity"
+            android:label="@string/game_name" >
+            <intent-filter>
+                <action android:name="ca.alexcomeau.texmobile.Game" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.EnterScoreActivity"
+            android:label="@string/enter_name"
+            android:theme="@style/Base.Theme.AppCompat.Dialog">
+            <intent-filter>
+                <action android:name="ca.alexcomeau.texmobile.EnterScore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.HighScoreActivity"
+            android:label="@string/highscore_name" >
+            <intent-filter>
+                <action android:name="ca.alexcomeau.texmobile.HighScores" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/settings"
+            android:theme="@style/Base.Theme.AppCompat.Dialog">
+            <intent-filter>
+                <action android:name="ca.alexcomeau.texmobile.Settings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:baselineAligned="false"
+    android:background="#63d1ff">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/leftControls"
+        android:paddingBottom="4dp"
+        android:layout_alignParentStart="true">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnMoveLeft"
+            android:tag="left"
+            android:src="@drawable/arrow_left"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/left"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnMoveRight"
+            android:tag="right"
+            android:src="@drawable/arrow_right"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/right"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnDown2"
+            android:tag="down"
+            android:src="@drawable/arrow_down"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/down"
+            style="?android:buttonBarButtonStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/leftControls"
+        android:layout_toStartOf="@+id/rightControls"
+        android:id="@+id/surface_layout">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ca.alexcomeau.texmobile.game.GameView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/svBoard" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:id="@+id/imgNext"
+                android:padding="5dp"
+                android:contentDescription="@string/next"
+                android:background="@drawable/next_piece_i"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/txtScore"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level"
+                android:textSize="16sp"
+                android:layout_marginTop="50dp"
+                android:id="@+id/txtLevel"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/rightControls"
+        android:paddingBottom="4dp"
+        android:layout_alignParentEnd="true">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnRotateLeft"
+            android:tag="rotateLeft"
+            android:src="@drawable/rotate_left"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/left"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnRotateRight"
+            android:tag="rotateRight"
+            android:src="@drawable/rotate_right"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/rotateRight"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnDown"
+            android:tag="down"
+            android:src="@drawable/arrow_down"
+            android:background="@drawable/button"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/down"
+            style="?android:buttonBarButtonStyle"/>
+    </LinearLayout>
+
+</RelativeLayout>
